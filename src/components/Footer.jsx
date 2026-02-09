@@ -12,7 +12,6 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div>
                         <div className="flex items-center gap-2 mb-4">
-                            <img src="/logo.png" alt="Central HR Logo" className="h-8 w-auto bg-white rounded-sm p-0.5" />
                             <h3 className="mb-0 text-white">Central HR</h3>
                         </div>
                         <p className="mb-4" style={{ opacity: 0.9 }}>
