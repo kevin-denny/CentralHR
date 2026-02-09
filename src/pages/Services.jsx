@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
+import AnimatedSection from '../components/ui/AnimatedSection';
 import { Users, ShieldCheck, Briefcase, TrendingUp, DollarSign } from 'lucide-react';
 
 const Services = () => {
@@ -61,27 +62,31 @@ const Services = () => {
             <div className="bg-gray-50 py-12">
                 {servicesList.map((service, index) => (
                     <Section key={service.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                        <div className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
-                            <div className="w-full md:w-1/2">
-                                <div className="text-accent mb-4">{service.icon}</div>
-                                <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
-                                <p className="text-lg text-gray-600 mb-6">{service.desc}</p>
-                                <ul className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                    {service.features.map((feature, i) => (
-                                        <li key={i} className="flex items-center text-gray-700">
-                                            <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <Button to="/contact" variant="primary">Request a Quote</Button>
-                            </div>
-                            <div className="w-full md:w-1/2 flex justify-center">
-                                <div className="bg-gray-200 w-full h-64 rounded-lg flex items-center justify-center">
-                                    <span className="text-gray-500">Image: {service.title}</span>
+                        <AnimatedSection animation="slideUp" delay={100}>
+                            <div className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                                <div className="w-full md:w-1/2">
+                                    <div className="text-accent mb-4 inline-block p-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-xl">
+                                        {service.icon}
+                                    </div>
+                                    <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
+                                    <p className="text-lg text-gray-600 mb-6 leading-relaxed">{service.desc}</p>
+                                    <ul className="mb-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        {service.features.map((feature, i) => (
+                                            <li key={i} className="flex items-center text-gray-700">
+                                                <span className="w-2 h-2 bg-gradient-to-r from-primary to-accent rounded-full mr-3 flex-shrink-0"></span>
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <Button to="/contact" variant="primary">Request a Quote</Button>
+                                </div>
+                                <div className="w-full md:w-1/2 flex justify-center">
+                                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 w-full h-64 rounded-xl flex items-center justify-center shadow-lg">
+                                        <span className="text-gray-400 font-medium">Image: {service.title}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     </Section>
                 ))}
             </div >

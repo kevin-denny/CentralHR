@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
+import AnimatedSection from '../components/ui/AnimatedSection';
 import { Target, Eye, Heart, Users } from 'lucide-react';
 
 const About = () => {
@@ -61,11 +62,17 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {values.map((value, index) => (
-                        <Card key={index} className="text-center hover:shadow-lg transition-all">
-                            <div className="text-accent mb-4 flex justify-center">{value.icon}</div>
-                            <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                            <p className="text-gray-600">{value.desc}</p>
-                        </Card>
+                        <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
+                            <Card className="text-center group">
+                                <div className="text-accent mb-4 flex justify-center">
+                                    <div className="p-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                                        {value.icon}
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                                <p className="text-gray-600">{value.desc}</p>
+                            </Card>
+                        </AnimatedSection>
                     ))}
                 </div>
             </Section>
@@ -78,14 +85,16 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {teamMembers.map((member, index) => (
-                        <Card key={index} className="text-center">
-                            <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <Users size={40} className="text-gray-500" />
-                            </div>
-                            <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                            <p className="text-primary font-medium mb-3">{member.role}</p>
-                            <p className="text-gray-600 text-sm">{member.bio}</p>
-                        </Card>
+                        <AnimatedSection key={index} animation="slideUp" delay={index * 150}>
+                            <Card className="text-center group">
+                                <div className="w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                    <Users size={48} className="text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                                <p className="text-accent font-medium mb-3">{member.role}</p>
+                                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+                            </Card>
+                        </AnimatedSection>
                     ))}
                 </div>
             </Section>

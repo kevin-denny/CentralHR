@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import AnimatedSection from '../components/ui/AnimatedSection';
 import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle, Quote } from 'lucide-react';
 
 const Home = () => {
@@ -75,11 +76,15 @@ const Home = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-                            <div className="mb-4">{service.icon}</div>
-                            <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                            <p className="text-gray-600">{service.description}</p>
-                        </Card>
+                        <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
+                            <Card className="text-center group">
+                                <div className="mb-4 inline-block transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
+                                    {service.icon}
+                                </div>
+                                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                                <p className="text-gray-600">{service.description}</p>
+                            </Card>
+                        </AnimatedSection>
                     ))}
                 </div>
                 <div className="text-center mt-12">
@@ -142,21 +147,23 @@ const Home = () => {
                             text: "Outsourcing our HR to Central HR was the best decision we made this year. It allowed us to focus on scaling our business."
                         }
                     ].map((client, i) => (
-                        <div key={i} className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 flex flex-col h-full">
-                            <Quote size={40} className="text-primary mb-4 opacity-20" />
-                            <p className="text-gray-700 mb-6 italic flex-grow text-lg">
-                                "{client.text}"
-                            </p>
-                            <div className="flex items-center mt-4">
-                                <div className="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold mr-4 text-xl">
-                                    {client.name.charAt(0)}
-                                </div>
-                                <div>
-                                    <div className="font-bold text-primary">{client.name}</div>
-                                    <div className="text-sm text-gray-500">{client.role}</div>
+                        <AnimatedSection key={i} animation="slideUp" delay={i * 150}>
+                            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group">
+                                <Quote size={40} className="text-accent mb-4 opacity-30 transition-all duration-300 group-hover:opacity-50 group-hover:scale-110" />
+                                <p className="text-gray-700 mb-6 italic flex-grow text-lg leading-relaxed">
+                                    "{client.text}"
+                                </p>
+                                <div className="flex items-center mt-4">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold mr-4 text-xl shadow-md">
+                                        {client.name.charAt(0)}
+                                    </div>
+                                    <div>
+                                        <div className="font-bold text-primary">{client.name}</div>
+                                        <div className="text-sm text-gray-500">{client.role}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </AnimatedSection>
                     ))}
                 </div>
             </Section>
