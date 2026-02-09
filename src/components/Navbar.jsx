@@ -18,13 +18,21 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div className="container" style={{ width: '100%' }}>
-                <div className="flex justify-between items-center" style={{ height: '5rem' }}>
+            <div className="container" style={{ width: '100%', padding: '0 2rem' }}>
+                <div className="flex justify-between items-center" style={{ height: '6rem' }}>
                     {/* Logo */}
-                    <div className="flex items-center">
-                        <Link to="/" className="flex items-center gap-2">
-                            <img src="/logo.png" alt="Central HR Logo" className="h-10 w-auto" />
-                            <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--primary-color)' }}>Central HR</span>
+                    <div className="flex items-center" style={{ height: '100%', padding: '1rem 0' }}>
+                        <Link to="/" className="flex items-center" style={{ height: '100%' }}>
+                            <img
+                                src="/logo.png"
+                                alt="Central HR Logo"
+                                style={{
+                                    height: '100%',
+                                    width: 'auto',
+                                    maxHeight: '4rem',
+                                    objectFit: 'contain'
+                                }}
+                            />
                         </Link>
                     </div>
 
