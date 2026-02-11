@@ -4,8 +4,8 @@ import AnimatedSection from '../../components/ui/AnimatedSection';
 import { Target, Eye, Heart, Users } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Us | Central HR Solutions',
-  description: 'Learn about Central HR Solutions, our mission, vision, and the expert team dedicated to empowering your business through strategic HR management.',
+    title: 'About Us | Central HR Solutions',
+    description: 'Learn about Central HR Solutions, our mission, vision, and the expert team dedicated to empowering your business through strategic HR management.',
 };
 
 export default function About() {
@@ -38,13 +38,11 @@ export default function About() {
             <Section>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-primary">Our Mission</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-primary">Our Strory</h2>
                         <p className="text-lg text-gray-700 mb-8">
-                            To provide accessible, high-quality HR expertise that enables businesses to build thriving cultures and sustainable growth.
-                        </p>
-                        <h2 className="text-3xl font-bold mb-6 text-primary">Our Vision</h2>
-                        <p className="text-lg text-gray-700">
-                            To be the most trusted HR partner for businesses seeking to navigate the modern workplace with confidence.
+                            Our Founder Shashi Jayawardena had a Vision. What if there was a HR Solutions provider who understood operations. Who understood customer complaints. Who understood Profits. Who understood Culture is in Recruitment, its in Audits, its in SOPs and Policy documents. That Culture is not one thing but EVERYTHING. and Culture is found in the Human elements of an organisation.
+
+                            So he formed CHRS with a focus to bring business leaders, CEOs, COOs, CFOs HR solutions that make their business thrive. With tailor made operational audits, a spectacular "Customer Service Program" and all the HR elements that make operational leaders focus on strategy and leave the Human Elements to us.
                         </p>
                     </div>
                     <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">

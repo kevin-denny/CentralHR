@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Youtube, Music2 } from 'lucide-react';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -18,10 +18,11 @@ const Footer = () => {
                             Professional HR consulting focused on delivering expertise, compliance, and talent development.
                         </p>
                         <div className="flex" style={{ gap: '1rem' }}>
-                            <a href="#" className="hover:text-accent transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="hover:text-accent transition-colors"><Twitter size={20} /></a>
-                            <a href="#" className="hover:text-accent transition-colors"><Linkedin size={20} /></a>
-                            <a href="#" className="hover:text-accent transition-colors"><Instagram size={20} /></a>
+                            <a href="https://web.facebook.com/profile.php?id=61573079602119" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Facebook size={20} /></a>
+                            <a href="https://www.linkedin.com/in/shashi-jayawardena/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Linkedin size={20} /></a>
+                            <a href="https://www.instagram.com/servicesensei" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Instagram size={20} /></a>
+                            <a href="https://www.youtube.com/@servicesensei-ss" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors"><Youtube size={20} /></a>
+                            <a href="https://www.tiktok.com/@servicesensei" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" title="TikTok"><Music2 size={20} /></a>
                         </div>
                     </div>
 
@@ -59,11 +60,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center">
                                 <Phone size={20} className="mr-2 text-accent" />
-                                <span className="" style={{ opacity: 0.9 }}>(555) 123-4567</span>
+                                <span className="" style={{ opacity: 0.9 }}>+94 77 743 1596</span>
                             </li>
                             <li className="flex items-center">
                                 <Mail size={20} className="mr-2 text-accent" />
-                                <span className="" style={{ opacity: 0.9 }}>info@centralhr.com</span>
+                                <a href="mailto:hello@centralhrsolutions.com" className="hover:text-accent transition-colors" style={{ opacity: 0.9 }}>hello@centralhrsolutions.com</a>
                             </li>
                         </ul>
                     </div>

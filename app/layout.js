@@ -4,7 +4,10 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Central HR Solutions',
-  description: 'Proffessional HR consulting for growing businesses.',
+  description: 'Professional HR consulting for growing businesses.',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -45,7 +45,7 @@ export default function Contact() {
                                 <Phone size={24} className="text-accent mr-4 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-lg mb-1">Phone</h3>
-                                    <p className="text-gray-600">(555) 123-4567</p>
+                                    <p className="text-gray-600">+94 77 743 1596</p>
                                 </div>
                             </Card>
 
@@ -53,7 +53,11 @@ export default function Contact() {
                                 <Mail size={24} className="text-accent mr-4 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-lg mb-1">Email</h3>
-                                    <p className="text-gray-600">info@centralhr.com</p>
+                                    <p className="text-gray-600">
+                                        <a href="mailto:hello@centralhrsolutions.com" className="hover:text-primary transition-colors">
+                                            hello@centralhrsolutions.com
+                                        </a>
+                                    </p>
                                 </div>
                             </Card>
 
