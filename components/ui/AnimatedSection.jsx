@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useRef, useState } from 'react';
 
 const AnimatedSection = ({ children, className = '', animation = 'fadeIn', delay = 0 }) => {

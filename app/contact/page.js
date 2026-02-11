@@ -1,17 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Section from '../../components/ui/Section';
+import Card from '../../components/ui/Card';
+import Button from '../../components/ui/Button';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
-const Contact = () => {
+export const metadata = {
+  title: 'Contact Us | Central HR Solutions',
+  description: 'Get in touch with Central HR Solutions. Contact us for HR consulting, recruitment, and compliance support. We\'re here to help.',
+};
+
+export default function Contact() {
     return (
         <>
-            <Helmet>
-                <title>Contact Us | Central HR Solutions</title>
-                <meta name="description" content="Get in touch with Central HR Solutions. Contact us for HR consulting, recruitment, and compliance support. We're here to help." />
-            </Helmet>
             <section className="hero">
                 <div className="container">
                     <h1 className="mb-6">Contact Us</h1>
@@ -126,6 +125,4 @@ const Contact = () => {
             </Section>
         </>
     );
-};
-
-export default Contact;
+}

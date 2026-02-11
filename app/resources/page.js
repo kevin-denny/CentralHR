@@ -1,10 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import Section from '../../components/ui/Section';
+import Card from '../../components/ui/Card';
+import Button from '../../components/ui/Button';
 
-const Resources = () => {
+export const metadata = {
+  title: 'HR Resources & Insights | Central HR Solutions',
+  description: 'Stay updated with the latest HR trends, compliance guides, and industry insights in our resources section.',
+};
+
+export default function Resources() {
     const articles = [
         {
             category: 'HR Guides',
@@ -46,10 +49,6 @@ const Resources = () => {
 
     return (
         <>
-            <Helmet>
-                <title>HR Resources & Insights | Central HR Solutions</title>
-                <meta name="description" content="Stay updated with the latest HR trends, compliance guides, and industry insights in our resources section." />
-            </Helmet>
             <section className="hero">
                 <div className="container">
                     <h1 className="mb-6">Resources</h1>
@@ -98,6 +97,4 @@ const Resources = () => {
             </Section>
         </>
     );
-};
-
-export default Resources;
+}

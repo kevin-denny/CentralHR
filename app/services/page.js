@@ -1,11 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Section from '../components/ui/Section';
-import Button from '../components/ui/Button';
-import AnimatedSection from '../components/ui/AnimatedSection';
+import Section from '../../components/ui/Section';
+import Button from '../../components/ui/Button';
+import AnimatedSection from '../../components/ui/AnimatedSection';
 import { Users, ShieldCheck, Briefcase, TrendingUp, DollarSign } from 'lucide-react';
 
-const Services = () => {
+export const metadata = {
+  title: 'Our Services | Central HR Solutions',
+  description: 'Explore our comprehensive HR services including consulting, talent acquisition, compliance, payroll support, and training & development.',
+};
+
+export default function Services() {
     const servicesList = [
         {
             id: 'consulting',
@@ -46,10 +49,6 @@ const Services = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Our Services | Central HR Solutions</title>
-                <meta name="description" content="Explore our comprehensive HR services including consulting, talent acquisition, compliance, payroll support, and training & development." />
-            </Helmet>
             <section className="hero">
                 <div className="container">
                     <h1 className="mb-6">Our Services</h1>
@@ -98,6 +97,4 @@ const Services = () => {
             </Section>
         </>
     );
-};
-
-export default Services;
+}

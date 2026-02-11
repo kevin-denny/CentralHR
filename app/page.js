@@ -1,12 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle, Quote } from 'lucide-react';
 
-const Home = () => {
+export const metadata = {
+  title: 'Central HR Solutions | Expert HR Consulting Services',
+  description: 'Professional HR consulting for growing businesses. We offer expertise in compliance, talent acquisition, training, and more. Get HR support today.',
+};
+
+export default function Home() {
     const services = [
         {
             icon: <Users size={32} className="text-accent" />,
@@ -39,10 +42,6 @@ const Home = () => {
 
     return (
         <>
-            <Helmet>
-                <title>Central HR Solutions | Expert HR Consulting Services</title>
-                <meta name="description" content="Professional HR consulting for growing businesses. We offer expertise in compliance, talent acquisition, training, and more. Get HR support today." />
-            </Helmet>
             {/* Hero Section */}
             <section className="hero">
                 <div className="container">
@@ -187,6 +186,4 @@ const Home = () => {
             </Section>
         </>
     );
-};
-
-export default Home;
+}

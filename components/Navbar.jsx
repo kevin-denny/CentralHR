@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Button from './ui/Button';
 
@@ -22,7 +24,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center" style={{ height: '6rem' }}>
                     {/* Logo */}
                     <div className="flex items-center" style={{ height: '100%', padding: '1rem 0' }}>
-                        <Link to="/" className="flex items-center" style={{ height: '100%' }}>
+                        <Link href="/" className="flex items-center" style={{ height: '100%' }}>
                             <img
                                 src="/logo.png"
                                 alt="Central HR Logo"
@@ -51,7 +53,7 @@ const Navbar = () => {
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
-                                to={link.path}
+                                href={link.path}
                                 className="nav-link"
                             >
                                 {link.name}
@@ -78,7 +80,7 @@ const Navbar = () => {
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
-                            to={link.path}
+                            href={link.path}
                             className="mobile-nav-link"
                             onClick={() => setIsOpen(false)}
                         >

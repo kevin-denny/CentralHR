@@ -1,11 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Section from '../components/ui/Section';
-import Card from '../components/ui/Card';
-import AnimatedSection from '../components/ui/AnimatedSection';
+import Section from '../../components/ui/Section';
+import Card from '../../components/ui/Card';
+import AnimatedSection from '../../components/ui/AnimatedSection';
 import { Target, Eye, Heart, Users } from 'lucide-react';
 
-const About = () => {
+export const metadata = {
+  title: 'About Us | Central HR Solutions',
+  description: 'Learn about Central HR Solutions, our mission, vision, and the expert team dedicated to empowering your business through strategic HR management.',
+};
+
+export default function About() {
     const teamMembers = [
         { name: 'Jane Doe', role: 'Founder & CEO', bio: '20+ years of HR experience transforming businesses.' },
         { name: 'John Smith', role: 'Head of Consulting', bio: 'Expert in labor law and compliance strategies.' },
@@ -21,10 +24,6 @@ const About = () => {
 
     return (
         <>
-            <Helmet>
-                <title>About Us | Central HR Solutions</title>
-                <meta name="description" content="Learn about Central HR Solutions, our mission, vision, and the expert team dedicated to empowering your business through strategic HR management." />
-            </Helmet>
             {/* Hero */}
             <section className="hero">
                 <div className="container">
@@ -100,6 +99,4 @@ const About = () => {
             </Section>
         </>
     );
-};
-
-export default About;
+}

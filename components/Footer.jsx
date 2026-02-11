@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -29,11 +29,11 @@ const Footer = () => {
                     <div>
                         <h4 className="mb-4 text-accent">Quick Links</h4>
                         <ul className="space-y-2">
-                            <li><Link to="/" className="text-white hover:text-accent transition-colors">Home</Link></li>
-                            <li><Link to="/about" className="text-white hover:text-accent transition-colors">About Us</Link></li>
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">Services</Link></li>
-                            <li><Link to="/resources" className="text-white hover:text-accent transition-colors">Resources</Link></li>
-                            <li><Link to="/contact" className="text-white hover:text-accent transition-colors">Contact</Link></li>
+                            <li><Link href="/" className="text-white hover:text-accent transition-colors">Home</Link></li>
+                            <li><Link href="/about" className="text-white hover:text-accent transition-colors">About Us</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">Services</Link></li>
+                            <li><Link href="/resources" className="text-white hover:text-accent transition-colors">Resources</Link></li>
+                            <li><Link href="/contact" className="text-white hover:text-accent transition-colors">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -41,11 +41,11 @@ const Footer = () => {
                     <div>
                         <h4 className="mb-4 text-accent">Services</h4>
                         <ul className="space-y-2">
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">HR Consulting</Link></li>
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">Talent Acquisition</Link></li>
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">Compliance & Risk</Link></li>
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">Training & Development</Link></li>
-                            <li><Link to="/services" className="text-white hover:text-accent transition-colors">Payroll Support</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">HR Consulting</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">Talent Acquisition</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">Compliance & Risk</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">Training & Development</Link></li>
+                            <li><Link href="/services" className="text-white hover:text-accent transition-colors">Payroll Support</Link></li>
                         </ul>
                     </div>
 
