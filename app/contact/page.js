@@ -4,8 +4,8 @@ import Button from '../../components/ui/Button';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const metadata = {
-  title: 'Contact Us | Central HR Solutions',
-  description: 'Get in touch with Central HR Solutions. Contact us for HR consulting, recruitment, and compliance support. We\'re here to help.',
+    title: 'Contact Us | Central HR Solutions',
+    description: 'Get in touch with Central HR Solutions. Contact us for HR consulting, recruitment, and compliance support. We\'re here to help.',
 };
 
 export default function Contact() {
@@ -30,16 +30,6 @@ export default function Contact() {
                         </p>
 
                         <div className="space-y-6">
-                            <Card className="flex items-start">
-                                <MapPin size={24} className="text-accent mr-4 mt-1 flex-shrink-0" />
-                                <div>
-                                    <h3 className="font-bold text-lg mb-1">Our Office</h3>
-                                    <p className="text-gray-600">
-                                        123 Business Avenue, Suite 100<br />
-                                        New York, NY 10001
-                                    </p>
-                                </div>
-                            </Card>
 
                             <Card className="flex items-center">
                                 <Phone size={24} className="text-accent mr-4 flex-shrink-0" />

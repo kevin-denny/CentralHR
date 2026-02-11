@@ -54,10 +54,6 @@ const Footer = () => {
                     <div>
                         <h4 className="mb-4 text-accent">Contact Us</h4>
                         <ul className="space-y-4">
-                            <li className="flex items-start">
-                                <MapPin size={20} className="mr-2 mt-1 text-accent" />
-                                <span className="" style={{ opacity: 0.9 }}>123 Business Avenue, Suite 100<br />New York, NY 10001</span>
-                            </li>
                             <li className="flex items-center">
                                 <Phone size={20} className="mr-2 text-accent" />
                                 <span className="" style={{ opacity: 0.9 }}>+94 77 743 1596</span>
