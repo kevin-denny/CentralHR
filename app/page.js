@@ -5,8 +5,8 @@ import AnimatedSection from '../components/ui/AnimatedSection';
 import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle, Quote } from 'lucide-react';
 
 export const metadata = {
-  title: 'Central HR Solutions | Expert HR Consulting Services',
-  description: 'Professional HR consulting for growing businesses. We offer expertise in compliance, talent acquisition, training, and more. Get HR support today.',
+    title: 'Central HR Solutions | Expert HR Consulting Services',
+    description: 'Professional HR consulting for growing businesses. We offer expertise in compliance, talent acquisition, training, and more. Get HR support today.',
 };
 
 export default function Home() {
@@ -75,13 +75,15 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
-                            <Card className="text-center group">
+                        <AnimatedSection key={index} animation="slideUp" delay={index * 100} className="h-full">
+                            <Card className="text-center group h-full flex flex-col items-center justify-between">
                                 <div className="mb-4 inline-block transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                                     {service.icon}
                                 </div>
-                                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                                <p className="text-gray-600">{service.description}</p>
+                                <div className="flex-grow flex flex-col justify-center">
+                                    <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                                    <p className="text-gray-600">{service.description}</p>
+                                </div>
                             </Card>
                         </AnimatedSection>
                     ))}
