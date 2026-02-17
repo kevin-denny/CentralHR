@@ -42,7 +42,8 @@ export default function About() {
                         <p className="text-lg text-gray-700 mb-8">
                             Our Founder Shashi Jayawardena had a Vision. What if there was a HR Solutions provider who understood operations. Who understood customer complaints. Who understood Profits. Who understood Culture is in Recruitment, its in Audits, its in SOPs and Policy documents. That Culture is not one thing but EVERYTHING. and Culture is found in the Human elements of an organisation.
 
-                            So he formed CHRS with a focus to bring business leaders, CEOs, COOs, CFOs HR solutions that make their business thrive. With tailor made operational audits, a spectacular "Customer Service Program" and all the HR elements that make operational leaders focus on strategy and leave the Human Elements to us.
+                            So he formed CHRS with a focus to bring business leaders, CEOs, COOs, CFOs HR solutions that make their business thrive. With tailor made operational audits, a spectacular &quot;Customer Service Program&quot; and all the HR elements that make operational leaders focus on strategy and leave the Human Elements to us.
+
                         </p>
                     </div>
                     <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">

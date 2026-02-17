@@ -127,7 +127,8 @@ export default function Home() {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
                     <p className="text-xl max-w-2xl mx-auto text-gray-600">
-                        Don't just take our word for it. Here's what our partners have to say.
+                        Don&apos;t just take our word for it. Here&apos;s what our partners have to say.
+
                     </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -152,7 +153,8 @@ export default function Home() {
                             <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group">
                                 <Quote size={40} className="text-accent mb-4 opacity-30 transition-all duration-300 group-hover:opacity-50 group-hover:scale-110" />
                                 <p className="text-gray-700 mb-6 italic flex-grow text-lg leading-relaxed">
-                                    "{client.text}"
+                                    &quot;{client.text}&quot;
+
                                 </p>
                                 <div className="flex items-center mt-4">
                                     <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold mr-4 text-xl shadow-md">
@@ -174,7 +176,8 @@ export default function Home() {
                 <div className="max-w-3xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Ready to Elevate Your HR Strategy?</h2>
                     <p className="text-xl mb-10 text-gray-200">
-                        Join hundreds of businesses that trust Central HR Solutions for their workforce management. Let's build a better workplace together.
+                        Join hundreds of businesses that trust Central HR Solutions for their workforce management. Let&apos;s build a better workplace together.
+
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
                         <Button to="/contact" variant="secondary" className="px-8 py-4 text-lg shadow-lg">
