@@ -38,7 +38,7 @@ export default function About() {
             <Section>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-primary">Our Strory</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-primary">Our Story</h2>
                         <p className="text-lg text-gray-700 mb-8">
                             Our Founder Shashi Jayawardena had a Vision. What if there was a HR Solutions provider who understood operations. Who understood customer complaints. Who understood Profits. Who understood Culture is in Recruitment, its in Audits, its in SOPs and Policy documents. That Culture is not one thing but EVERYTHING. and Culture is found in the Human elements of an organisation.
 
