@@ -12,6 +12,11 @@ export const metadata = {
 export default function Home() {
     const services = [
         {
+            icon: <TrendingUp size={32} className="text-accent" />,
+            title: 'Training & Development',
+            description: 'Empower your team with customized training programs designed to enhance skills and productivity.'
+        },
+        {
             icon: <Users size={32} className="text-accent" />,
             title: 'HR Consulting',
             description: 'Strategic HR solutions tailored to your business goals. From organizational design to culture building.'
@@ -25,11 +30,6 @@ export default function Home() {
             icon: <Briefcase size={32} className="text-accent" />,
             title: 'Talent Acquisition',
             description: 'Attract and retain top talent. We help you build a high-performing workforce that drives success.'
-        },
-        {
-            icon: <TrendingUp size={32} className="text-accent" />,
-            title: 'Training & Development',
-            description: 'Empower your team with customized training programs designed to enhance skills and productivity.'
         }
     ];
 
@@ -46,7 +46,7 @@ export default function Home() {
             <section className="hero">
                 <div className="container">
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white max-w-4xl mx-auto">
-                        Expert HR Solutions for Your Growing Business
+                        Expert Training & HR Solutions for Your Growing Business
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto">
                         We handle the people side of your business so you can focus on what you do best.

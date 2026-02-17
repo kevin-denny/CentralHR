@@ -2,6 +2,8 @@ import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+import WhatsAppButton from '../components/WhatsAppButton';
+
 export const metadata = {
   title: 'Central HR Solutions',
   description: 'Professional HR consulting for growing businesses.',
@@ -20,8 +22,10 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <WhatsAppButton />
         </div>
       </body>
     </html>
   );
 }
+
