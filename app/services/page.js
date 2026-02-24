@@ -47,7 +47,7 @@ export default function Services() {
             id: 'training',
             icon: <TrendingUp size={40} />,
             title: 'Training & Development',
-            image: '/images/img6.webp',
+            image: '/images/img11.webp',
             features: ['Leadership Workshops', 'Skill Assessments', 'Team Building', 'Performance Management'],
             desc: 'Invest in your team\'s growth. Our customized training programs help develop leadership skills and improve overall performance.'
         }
@@ -91,6 +91,9 @@ export default function Services() {
                                             src={service.image}
                                             alt={service.title}
                                             fill
+                                            priority={index === 0}
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                            quality={70}
                                             style={{ objectFit: "cover" }}
                                             className="rounded-xl"
                                         />
@@ -105,7 +108,7 @@ export default function Services() {
             <Section className="bg-primary text-white text-center">
                 <h2 className="text-3xl font-bold mb-6">Need a Custom Solution?</h2>
                 <p className="text-xl mb-8">We can tailor our services to fit your specific requirements.</p>
-                <Button to="/contact" className="bg-white text-primary hover:bg-gray-100">Contact Us</Button>
+                <Button to="/contact" variant="secondary">Contact Us</Button>
             </Section>
         </>
     );

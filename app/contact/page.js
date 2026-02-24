@@ -66,11 +66,14 @@ export default function Contact() {
                     </div>
 
                     {/* Visual Enhancement Image */}
-                    <div className="relative h-full min-h-[500px] w-full rounded-xl shadow-xl hidden lg:block" style={{ position: "relative" }}>
+                    <div className="relative h-full min-h-[500px] w-full rounded-xl overflow-hidden shadow-xl hidden lg:block" style={{ position: "relative" }}>
                         <Image
                             src="/images/img11.webp"
                             alt="Contact Us"
                             fill
+                            priority
+                            sizes="(max-width: 1024px) 0vw, 50vw"
+                            quality={75}
                             style={{ objectFit: "cover" }}
                             className="rounded-xl"
                         />
@@ -119,15 +122,6 @@ export default function Contact() {
                     </form>
                 </div>
 
-                {/* Map Placeholder */}
-                <div className="mt-16 bg-gray-200 h-96 w-full rounded-lg flex items-center justify-center text-gray-500">
-                    {/* In a real app, this would be a Google Maps iframe */}
-                    <div className="text-center">
-                        <MapPin size={48} className="mx-auto mb-2 opacity-50" />
-                        <p className="text-xl font-medium">Google Maps Embed Placeholder</p>
-                        <p className="text-sm">Location: New York, NY</p>
-                    </div>
-                </div>
             </Section>
         </>
     );

@@ -47,11 +47,14 @@ export default function About() {
 
                         </p>
                     </div>
-                    <div className="relative h-80 md:h-96 w-full rounded-lg shadow-xl" style={{ position: "relative" }}>
+                    <div className="relative h-80 md:h-96 w-full rounded-lg overflow-hidden shadow-xl" style={{ position: "relative" }}>
                         <Image
                             src="/images/img7.webp"
                             alt="Office Collaboration"
                             fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            quality={75}
                             style={{ objectFit: "cover" }}
                             className="rounded-lg"
                         />
@@ -97,6 +100,8 @@ export default function About() {
                                         src={member.image}
                                         alt={member.name}
                                         fill
+                                        sizes="128px"
+                                        quality={70}
                                         style={{ objectFit: "cover" }}
                                         className="rounded-full"
                                     />

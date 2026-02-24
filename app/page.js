@@ -115,11 +115,14 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
-                        <div className="relative rounded-lg h-80 md:h-96 w-full shadow-xl" style={{ position: "relative" }}>
+                        <div className="relative rounded-lg overflow-hidden h-80 md:h-96 w-full shadow-xl" style={{ position: "relative" }}>
                             <Image
                                 src="/images/img1.webp"
                                 alt="Professional Office Team"
                                 fill
+                                priority
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                quality={75}
                                 style={{ objectFit: "cover" }}
                                 className="rounded-lg"
                             />
