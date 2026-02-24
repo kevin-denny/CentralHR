@@ -2,6 +2,7 @@ import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import Image from 'next/image';
 import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle, Quote } from 'lucide-react';
 
 export const metadata = {
@@ -114,9 +115,14 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="w-full md:w-1/2">
-                        <div className="bg-gray-200 rounded-lg h-80 md:h-96 w-full flex items-center justify-center text-gray-400">
-                            {/* Placeholder for an image */}
-                            <span className="text-lg font-medium">Image: Professional Office Team</span>
+                        <div className="relative rounded-lg h-80 md:h-96 w-full shadow-xl" style={{ position: "relative" }}>
+                            <Image
+                                src="/images/img1.webp"
+                                alt="Professional Office Team"
+                                fill
+                                style={{ objectFit: "cover" }}
+                                className="rounded-lg"
+                            />
                         </div>
                     </div>
                 </div>

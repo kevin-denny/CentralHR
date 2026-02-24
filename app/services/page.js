@@ -1,11 +1,12 @@
 import Section from '../../components/ui/Section';
 import Button from '../../components/ui/Button';
 import AnimatedSection from '../../components/ui/AnimatedSection';
+import Image from 'next/image';
 import { Users, ShieldCheck, Briefcase, TrendingUp, DollarSign } from 'lucide-react';
 
 export const metadata = {
-  title: 'Our Services | Central HR Solutions',
-  description: 'Explore our comprehensive HR services including consulting, talent acquisition, compliance, payroll support, and training & development.',
+    title: 'Our Services | Central HR Solutions',
+    description: 'Explore our comprehensive HR services including consulting, talent acquisition, compliance, payroll support, and training & development.',
 };
 
 export default function Services() {
@@ -14,6 +15,7 @@ export default function Services() {
             id: 'consulting',
             icon: <Users size={40} />,
             title: 'HR Consulting',
+            image: '/images/img2.webp',
             features: ['Organizational Design', 'Culture Building', 'Policy Development', 'Change Management'],
             desc: 'Our strategic consulting services help you align your people strategy with your business goals. We work with you to design organizational structures that promote efficiency and growth.'
         },
@@ -21,6 +23,7 @@ export default function Services() {
             id: 'talent',
             icon: <Briefcase size={40} />,
             title: 'Talent Acquisition',
+            image: '/images/img3.webp',
             features: ['Executive Search', 'Recruitment Process Outsourcing', 'Onboarding Programs', 'Employer Branding'],
             desc: 'Finding the right talent is crucial. We handle the entire recruitment process, ensuring you attract candidates who fit both the role and your company culture.'
         },
@@ -28,6 +31,7 @@ export default function Services() {
             id: 'compliance',
             icon: <ShieldCheck size={40} />,
             title: 'Compliance & Risk Management',
+            image: '/images/img4.webp',
             features: ['Audit & Assessment', 'Handbook Creation', 'Labor Law Guidance', 'Risk Mitigation'],
             desc: 'Stay compliant with ever-changing labor laws. We provide thorough audits and policy development to protect your business from legal risks.'
         },
@@ -35,6 +39,7 @@ export default function Services() {
             id: 'payroll',
             icon: <DollarSign size={40} />,
             title: 'Payroll Support',
+            image: '/images/img5.webp',
             features: ['Payroll Processing', 'Benefits Administration', 'Tax Filing Support', 'System Implementation'],
             desc: 'Ensure accurate and timely payroll processing. We offer full support for benefits administration and payroll management to reduce administrative burden.'
         },
@@ -42,6 +47,7 @@ export default function Services() {
             id: 'training',
             icon: <TrendingUp size={40} />,
             title: 'Training & Development',
+            image: '/images/img6.webp',
             features: ['Leadership Workshops', 'Skill Assessments', 'Team Building', 'Performance Management'],
             desc: 'Invest in your team\'s growth. Our customized training programs help develop leadership skills and improve overall performance.'
         }
@@ -80,8 +86,14 @@ export default function Services() {
                                     <Button to="/contact" variant="primary">Request a Quote</Button>
                                 </div>
                                 <div className="w-full md:w-1/2 flex justify-center">
-                                    <div className="bg-gradient-to-br from-gray-100 to-gray-200 w-full h-64 rounded-xl flex items-center justify-center shadow-lg">
-                                        <span className="text-gray-400 font-medium">Image: {service.title}</span>
+                                    <div className="relative w-full h-80 rounded-xl overflow-hidden shadow-xl" style={{ position: "relative" }}>
+                                        <Image
+                                            src={service.image}
+                                            alt={service.title}
+                                            fill
+                                            style={{ objectFit: "cover" }}
+                                            className="rounded-xl"
+                                        />
                                     </div>
                                 </div>
                             </div>

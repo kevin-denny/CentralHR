@@ -1,6 +1,7 @@
 import Section from '../../components/ui/Section';
 import Card from '../../components/ui/Card';
 import AnimatedSection from '../../components/ui/AnimatedSection';
+import Image from 'next/image';
 import { Target, Eye, Heart, Users } from 'lucide-react';
 
 export const metadata = {
@@ -10,9 +11,9 @@ export const metadata = {
 
 export default function About() {
     const teamMembers = [
-        { name: 'Jane Doe', role: 'Founder & CEO', bio: '20+ years of HR experience transforming businesses.' },
-        { name: 'John Smith', role: 'Head of Consulting', bio: 'Expert in labor law and compliance strategies.' },
-        { name: 'Sarah Johnson', role: 'Talent Acquisition Lead', bio: 'Specialist in executive search and recruitment.' },
+        { name: 'Jane Doe', role: 'Founder & CEO', bio: '20+ years of HR experience transforming businesses.', image: '/images/img8.webp' },
+        { name: 'John Smith', role: 'Head of Consulting', bio: 'Expert in labor law and compliance strategies.', image: '/images/img9.webp' },
+        { name: 'Sarah Johnson', role: 'Talent Acquisition Lead', bio: 'Specialist in executive search and recruitment.', image: '/images/img10.webp' },
     ];
 
     const values = [
@@ -46,8 +47,14 @@ export default function About() {
 
                         </p>
                     </div>
-                    <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
-                        <span className="text-gray-500">Image: Office Collaboration</span>
+                    <div className="relative h-80 md:h-96 w-full rounded-lg shadow-xl" style={{ position: "relative" }}>
+                        <Image
+                            src="/images/img7.webp"
+                            alt="Office Collaboration"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="rounded-lg"
+                        />
                     </div>
                 </div>
             </Section>
@@ -85,8 +92,14 @@ export default function About() {
                     {teamMembers.map((member, index) => (
                         <AnimatedSection key={index} animation="slideUp" delay={index * 150}>
                             <Card className="text-center group">
-                                <div className="w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                                    <Users size={48} className="text-white" />
+                                <div className="w-32 h-32 mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110 relative" style={{ position: "relative" }}>
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        style={{ objectFit: "cover" }}
+                                        className="rounded-full"
+                                    />
                                 </div>
                                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                                 <p className="text-accent font-medium mb-3">{member.role}</p>

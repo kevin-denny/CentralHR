@@ -1,10 +1,11 @@
 import Section from '../../components/ui/Section';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
+import Image from 'next/image';
 
 export const metadata = {
-  title: 'HR Resources & Insights | Central HR Solutions',
-  description: 'Stay updated with the latest HR trends, compliance guides, and industry insights in our resources section.',
+    title: 'HR Resources & Insights | Central HR Solutions',
+    description: 'Stay updated with the latest HR trends, compliance guides, and industry insights in our resources section.',
 };
 
 export default function Resources() {
@@ -59,6 +60,32 @@ export default function Resources() {
             </section>
 
             <Section className="bg-gray-50">
+                {/* Featured Resource */}
+                <div className="mb-16">
+                    <div className="flex flex-col md:flex-row gap-8 items-center bg-white rounded-xl overflow-hidden shadow-lg">
+                        <div className="w-full md:w-1/2 relative h-64 md:h-full min-h-[300px]" style={{ position: "relative" }}>
+                            <Image
+                                src="/images/img12.webp"
+                                alt="Featured HR Resource"
+                                fill
+                                style={{ objectFit: "cover" }}
+                            />
+                        </div>
+                        <div className="w-full md:w-1/2 p-8 lg:p-12">
+                            <div className="text-sm font-semibold text-accent mb-3 uppercase tracking-wide">
+                                Featured Guide
+                            </div>
+                            <h2 className="text-3xl font-bold mb-4">
+                                <a href="#" className="hover:text-primary transition-colors">The Complete HR Playbook for 2024</a>
+                            </h2>
+                            <p className="text-gray-600 mb-6 text-lg">
+                                Discover the essential strategies and trends that will shape human resources this year. From AI integration to advanced employee retention techniques, this comprehensive guide covers everything you need to know.
+                            </p>
+                            <Button variant="primary">Read Full Guide</Button>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {articles.map((article, index) => (
                         <Card key={index} className="flex flex-col h-full hover:shadow-xl transition-shadow">

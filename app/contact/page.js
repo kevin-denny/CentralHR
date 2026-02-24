@@ -1,6 +1,7 @@
 import Section from '../../components/ui/Section';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 export const metadata = {
@@ -21,8 +22,8 @@ export default function Contact() {
             </section>
 
             <Section>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Contact Info */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Contact Form Details */}
                     <div>
                         <h2 className="text-3xl font-bold mb-6 text-primary">Get In Touch</h2>
                         <p className="text-gray-600 mb-8 text-lg">
@@ -64,47 +65,58 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* Contact Form */}
-                    <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
-                        <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
-                                    <input type="text" id="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="John" />
-                                </div>
-                                <div>
-                                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
-                                    <input type="text" id="lastName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="Doe" />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                                <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="john@example.com" />
-                            </div>
-
-                            <div>
-                                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                                <select id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
-                                    <option>General Inquiry</option>
-                                    <option>HR Consulting</option>
-                                    <option>Recruitment Services</option>
-                                    <option>Compliance Assistance</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <textarea id="message" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="How can we help you?"></textarea>
-                            </div>
-
-                            <Button type="submit" variant="primary" className="w-full">
-                                Send Message
-                            </Button>
-                        </form>
+                    {/* Visual Enhancement Image */}
+                    <div className="relative h-full min-h-[500px] w-full rounded-xl shadow-xl hidden lg:block" style={{ position: "relative" }}>
+                        <Image
+                            src="/images/img11.webp"
+                            alt="Contact Us"
+                            fill
+                            style={{ objectFit: "cover" }}
+                            className="rounded-xl"
+                        />
                     </div>
+                </div>
+
+                {/* Contact Form below the info */}
+                <div className="mt-16 max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200">
+                    <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+                    <form className="space-y-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" id="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="John" />
+                            </div>
+                            <div>
+                                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" id="lastName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="Doe" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="john@example.com" />
+                        </div>
+
+                        <div>
+                            <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <select id="subject" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                                <option>General Inquiry</option>
+                                <option>HR Consulting</option>
+                                <option>Recruitment Services</option>
+                                <option>Compliance Assistance</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <Button type="submit" variant="primary" className="w-full">
+                            Send Message
+                        </Button>
+                    </form>
                 </div>
 
                 {/* Map Placeholder */}
