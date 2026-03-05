@@ -11,10 +11,17 @@ export const metadata = {
 
 export default function About() {
     const teamMembers = [
-        { name: 'Jane Doe', role: 'Founder & CEO', bio: '20+ years of HR experience transforming businesses.', image: '/images/img8.webp' },
-        { name: 'John Smith', role: 'Head of Consulting', bio: 'Expert in labor law and compliance strategies.', image: '/images/img9.webp' },
-        { name: 'Sarah Johnson', role: 'Talent Acquisition Lead', bio: 'Specialist in executive search and recruitment.', image: '/images/img10.webp' },
+        { name: 'Shashi Jayawardena', role: 'Master Trainer, CEO, Hotelier', bio: '', image: '/team/shashi.png' },
+        { name: 'Soundarie David Rodrigo', role: 'Attorney-at-law, Artistic Director, Concert Pianist', bio: '', image: '/team/soundarie.png' },
+        { name: 'Bjorn Vanderhorst', role: 'Senior Consultant, Michelin-starred Chef, Culinary Director', bio: '', image: '/team/bjorn.png' },
+        { name: 'Priyankara Sumanapalage', role: 'CEO, Educator, Colombo Bartender & Barista School', bio: '', image: '/team/priyankara.png' },
+        { name: 'Danu Innasithamby', role: 'Media Advisor, TV Personality', bio: '', image: '/team/danu.png' },
+        { name: 'Amaya Rodrigo', role: 'Senior Auditor, Early Childhood Educator, Operations Manager', bio: '', image: '/team/amaya.png' },
+        { name: 'Cheranka Mendis', role: 'Senior Consultant, Director of Communications, SM & Communications Trainer', bio: '', image: '/team/cheranka.png' },
     ];
+
+    const leader = teamMembers.find(m => m.name === 'Shashi Jayawardena');
+    const restOfTeam = teamMembers.filter(m => m.name !== 'Shashi Jayawardena');
 
     const values = [
         { icon: <Target size={32} />, title: 'Integrity', desc: 'We operate with the highest ethical standards.' },
@@ -91,24 +98,47 @@ export default function About() {
                     <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
                     <p className="text-gray-600">Experts dedicated to your success.</p>
                 </div>
+
+                {/* Leader Section */}
+                {leader && (
+                    <div className="max-w-3xl mx-auto mb-16">
+                        <AnimatedSection animation="slideUp" delay={0}>
+                            <Card className="text-center group flex flex-col items-center">
+                                <div className="w-48 h-48 mx-auto mb-6 transition-transform duration-300 group-hover:scale-110 relative rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.1)] overflow-hidden">
+                                    <Image
+                                        src={leader.image}
+                                        alt={leader.name}
+                                        width={192}
+                                        height={192}
+                                        quality={75}
+                                        className="object-cover w-full h-full"
+                                    />
+                                </div>
+                                <h3 className="text-3xl font-bold mb-2">{leader.name}</h3>
+                                <p className="text-accent text-xl font-medium mb-4">{leader.role}</p>
+                                {leader.bio && <p className="text-gray-600 leading-relaxed text-lg">{leader.bio}</p>}
+                            </Card>
+                        </AnimatedSection>
+                    </div>
+                )}
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {teamMembers.map((member, index) => (
-                        <AnimatedSection key={index} animation="slideUp" delay={index * 150}>
-                            <Card className="text-center group">
-                                <div className="w-32 h-32 mx-auto mb-4 shadow-lg transition-transform duration-300 group-hover:scale-110 relative" style={{ position: "relative" }}>
+                    {restOfTeam.map((member, index) => (
+                        <AnimatedSection key={index} className="h-full" animation="slideUp" delay={index * 150}>
+                            <Card className="text-center group h-full flex flex-col">
+                                <div className="w-32 h-32 mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 relative rounded-full shadow-[0_4px_16px_rgba(0,0,0,0.1)] overflow-hidden">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
-                                        fill
-                                        sizes="128px"
-                                        quality={70}
-                                        style={{ objectFit: "cover" }}
-                                        className="rounded-full"
+                                        width={128}
+                                        height={128}
+                                        quality={75}
+                                        className="object-cover w-full h-full"
                                     />
                                 </div>
                                 <h3 className="text-xl font-bold mb-1">{member.name}</h3>
                                 <p className="text-accent font-medium mb-3">{member.role}</p>
-                                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
+                                {member.bio && <p className="text-gray-600 text-sm leading-relaxed mt-auto">{member.bio}</p>}
                             </Card>
                         </AnimatedSection>
                     ))}
