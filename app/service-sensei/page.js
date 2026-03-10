@@ -117,7 +117,7 @@ export default function ServiceSensei() {
                         <div className="w-full md:w-1/2">
                             <h2 className="text-3xl font-bold mb-6">3S Levels</h2>
                             <p className="text-gray-600 mb-8 text-lg">
-                                Our rating system acts as a true reflection of your organization's service quality, guiding you on where you stand and where you need to go.
+                                Our rating system acts as a true reflection of your organization&apos;s service quality, guiding you on where you stand and where you need to go.
                             </p>
                             <div className="space-y-6">
                                 {starLevels.map((level, index) => (
