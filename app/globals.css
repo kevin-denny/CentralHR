@@ -626,6 +626,15 @@ img { max-width: 100%; height: auto; display: block; }
   transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 .whatsapp-float:hover {
   background-color: #128c7e;
   transform: scale(1.1);
@@ -634,6 +643,13 @@ img { max-width: 100%; height: auto; display: block; }
 .whatsapp-icon {
   width: 35px;
   height: 35px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-icon {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 /* Tooltip for WhatsApp */
