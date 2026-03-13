@@ -15,6 +15,7 @@ const Navbar = () => {
         { name: 'About', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Grade Your Service (S3)', path: '/grade-service' },
+        { name: 'Service Sensei', path: '/service-sensei' },
         { name: 'Contact', path: '/contact' },
     ];
 
