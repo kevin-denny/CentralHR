@@ -140,11 +140,9 @@ export default function ServiceSensei() {
     return (
         <>
             <style>{`
-                @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
                 .ss-page *, .ss-page *::before, .ss-page *::after { box-sizing: border-box; }
                 .ss-page {
-                    font-family: 'Inter', sans-serif;
+                    font-family: var(--font-inter), sans-serif;
                     background: #000;
                     color: #fff;
                     overflow-x: hidden;
@@ -196,7 +194,7 @@ export default function ServiceSensei() {
                     border-radius: 9999px; margin-bottom: 2rem;
                 }
                 .ss-hero-title {
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: var(--font-bebas);
                     font-size: clamp(3.8rem, 11vw, 8.5rem);
                     line-height: .9; margin-bottom: 1.5rem; letter-spacing: .02em; color: #fff;
                 }
@@ -208,7 +206,7 @@ export default function ServiceSensei() {
                 }
                 .ss-hero-sub em { color: #e8a265; font-style: normal; font-weight: 600; }
                 .ss-hero-tagline {
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: var(--font-bebas);
                     font-size: clamp(1.2rem, 3.5vw, 2rem); letter-spacing: .15em;
                     color: rgba(255,255,255,.25); margin-bottom: 2.5rem;
                 }
@@ -256,7 +254,7 @@ export default function ServiceSensei() {
                     animation: marquee 20s linear infinite;
                 }
                 .ss-strip-item {
-                    font-family: 'Bebas Neue', cursive; font-size: 1.2rem;
+                    font-family: var(--font-bebas); font-size: 1.2rem;
                     letter-spacing: .15em; color: #fff;
                     display: inline-flex; align-items: center; gap: 1rem;
                 }
@@ -271,7 +269,7 @@ export default function ServiceSensei() {
                     color: #fd332a; margin-bottom: .75rem;
                 }
                 .ss-title {
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: var(--font-bebas);
                     font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1; margin-bottom: 1.25rem; letter-spacing: .03em;
                 }
                 .ss-title .a { color: #e8a265; }
@@ -284,14 +282,14 @@ export default function ServiceSensei() {
                 }
                 @media (min-width: 860px) { .ss-intro-layout { grid-template-columns: 1fr 1fr; } }
                 .ss-intro-quote {
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: var(--font-bebas);
                     font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: .06em;
                     color: rgba(255,255,255,.08); line-height: 1.1; margin-bottom: 2rem;
                 }
                 .ss-stat-row { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 2.5rem; }
                 .ss-stat { }
                 .ss-stat-num {
-                    font-family: 'Bebas Neue', cursive; font-size: 3rem;
+                    font-family: var(--font-bebas); font-size: 3rem;
                     color: #fd332a; line-height: 1; margin-bottom: .2rem;
                 }
                 .ss-stat-label { font-size: .75rem; letter-spacing: .12em; color: rgba(255,255,255,.4); text-transform: uppercase; }
@@ -330,7 +328,7 @@ export default function ServiceSensei() {
                 .ss-purpose-item:hover { background: #163260; }
                 .ss-purpose-item:hover::after { transform: scaleX(1); }
                 .ss-pi-num {
-                    font-family: 'Bebas Neue', cursive; font-size: 3.5rem;
+                    font-family: var(--font-bebas); font-size: 3.5rem;
                     color: rgba(232,162,101,.15); line-height: 1; margin-bottom: .75rem;
                 }
                 .ss-purpose-item p { font-size: .88rem; color: rgba(255,255,255,.7); line-height: 1.6; }
@@ -359,7 +357,7 @@ export default function ServiceSensei() {
                     transition: background .3s, color .3s;
                 }
                 .ss-teach-card:hover .ss-teach-icon { background: #e8a265; color: #000; }
-                .ss-teach-card h3 { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 700; margin-bottom: .6rem; color: #fff; }
+                .ss-teach-card h3 { font-family: var(--font-inter); font-size: 1rem; font-weight: 700; margin-bottom: .6rem; color: #fff; }
                 .ss-teach-card p { font-size: .85rem; color: rgba(255,255,255,.5); line-height: 1.7; }
 
                 /* ─── AUDIENCE ─── */
@@ -425,9 +423,9 @@ export default function ServiceSensei() {
                 }
                 .ss-tagline-row:hover { padding-left: 1rem; }
                 .ss-tagline-row:hover .ss-tagline-text { color: #fff; }
-                .ss-tagline-num { font-family: 'Bebas Neue', cursive; font-size: 1rem; color: #fd332a; letter-spacing: .1em; flex-shrink: 0; }
+                .ss-tagline-num { font-family: var(--font-bebas); font-size: 1rem; color: #fd332a; letter-spacing: .1em; flex-shrink: 0; }
                 .ss-tagline-text {
-                    font-family: 'Bebas Neue', cursive; font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+                    font-family: var(--font-bebas); font-size: clamp(1.4rem, 3.5vw, 2.4rem);
                     letter-spacing: .04em; color: rgba(255,255,255,.5);
                     transition: color .3s;
                 }
@@ -481,7 +479,7 @@ export default function ServiceSensei() {
                     border-color: rgba(255,255,255,.4); color: #fff;
                 }
                 .ss-plat-name {
-                    font-family: 'Bebas Neue', cursive; font-size: 1.8rem;
+                    font-family: var(--font-bebas); font-size: 1.8rem;
                     letter-spacing: .06em; line-height: 1;
                 }
                 .ss-plat-handle {
@@ -530,7 +528,7 @@ export default function ServiceSensei() {
                 }
                 .ss-cta-bg > * { position: relative; z-index: 1; }
                 .ss-cta-title {
-                    font-family: 'Bebas Neue', cursive;
+                    font-family: var(--font-bebas);
                     font-size: clamp(3rem, 8vw, 6.5rem); line-height: 1; margin-bottom: 1.25rem; letter-spacing: .02em;
                 }
                 .ss-cta-sub { font-size: 1.1rem; color: rgba(255,255,255,.5); margin-bottom: 3rem; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }

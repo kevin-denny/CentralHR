@@ -27,9 +27,27 @@ const Navbar = () => {
                 <div className="flex justify-between items-center" style={{ height: '6rem' }}>
                     {/* Logo */}
                     <div className="flex items-center" style={{ height: '100%', padding: '1rem 0' }}>
-                        <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
-                            <Image src={'/logo.png'} alt="Central HR Solutions Logo" width={40} height={40} className="object-contain" />
-                            <span className="font-bold text-xl tracking-tight text-primary">Central HR</span>
+                        <Link href="/" className="flex items-center gap-4" style={{ height: '100%' }}>
+                            <img
+                                src="/logo.png"
+                                alt="Central HR Logo"
+                                style={{
+                                    height: '100%',
+                                    width: 'auto',
+                                    maxHeight: '4rem',
+                                    objectFit: 'contain'
+                                }}
+                            />
+                            <img
+                                src="/ss.webp"
+                                alt="Central HR Logo"
+                                style={{
+                                    height: '100%',
+                                    width: 'auto',
+                                    maxHeight: '4rem',
+                                    objectFit: 'contain'
+                                }}
+                            />
                         </Link>
                     </div>
 
