@@ -12,6 +12,14 @@ export const metadata = {
 export default function Services() {
     const servicesList = [
         {
+            id: 'training',
+            icon: <TrendingUp size={40} />,
+            title: 'Training & Development',
+            image: '/images/img11.webp',
+            features: ['Leadership Workshops', 'Skill Assessments', 'Team Building', 'Performance Management'],
+            desc: 'Invest in your team\'s growth. Our customized training programs help develop leadership skills and improve overall performance.'
+        },
+        {
             id: 'consulting',
             icon: <Users size={40} />,
             title: 'HR Consulting',
@@ -42,14 +50,6 @@ export default function Services() {
             image: '/images/img5.webp',
             features: ['Payroll Processing', 'Benefits Administration', 'Tax Filing Support', 'System Implementation'],
             desc: 'Ensure accurate and timely payroll processing. We offer full support for benefits administration and payroll management to reduce administrative burden.'
-        },
-        {
-            id: 'training',
-            icon: <TrendingUp size={40} />,
-            title: 'Training & Development',
-            image: '/images/img11.webp',
-            features: ['Leadership Workshops', 'Skill Assessments', 'Team Building', 'Performance Management'],
-            desc: 'Invest in your team\'s growth. Our customized training programs help develop leadership skills and improve overall performance.'
         }
     ];
 
