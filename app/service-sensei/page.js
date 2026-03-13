@@ -489,30 +489,35 @@ export default function ServiceSensei() {
                 .ss-plat-desc { font-size: .85rem; color: rgba(255,255,255,.5); line-height: 1.65; }
 
                 /* ─── FLOATING SIDEBAR ─── */
-                .ss-sidebar {
-                    position: fixed; right: 0; top: 50%;
-                    transform: translateY(-50%) translateX(calc(100% - 3px));
-                    z-index: 99;
-                    display: flex; flex-direction: column; gap: 2px;
-                    transition: transform .4s cubic-bezier(.77,0,.175,1);
+                @media (min-width: 1024px) {
+                    .ss-sidebar {
+                        position: fixed; right: 0; top: 50%;
+                        transform: translateY(-50%) translateX(calc(100% - 3px));
+                        z-index: 99;
+                        display: flex; flex-direction: column; gap: 2px;
+                        transition: transform .4s cubic-bezier(.77,0,.175,1);
+                    }
+                    .ss-sidebar.show { transform: translateY(-50%) translateX(0); }
+                    .ss-sidebar-btn {
+                        display: flex; align-items: center; gap: .6rem;
+                        padding: .65rem 1rem;
+                        background: #111; color: rgba(255,255,255,.7);
+                        border: none; border-left: none;
+                        font-size: .75rem; font-weight: 600; letter-spacing: .05em;
+                        cursor: pointer; transition: all .25s;
+                        white-space: nowrap;
+                        border-left: 3px solid transparent;
+                        text-decoration: none;
+                    }
+                    .ss-sidebar-btn:hover { color: #fff; padding-right: 1.4rem; }
+                    .ss-sidebar-icon {
+                        width: 28px; height: 28px; border-radius: 6px;
+                        display: flex; align-items: center; justify-content: center;
+                        flex-shrink: 0;
+                    }
                 }
-                .ss-sidebar.show { transform: translateY(-50%) translateX(0); }
-                .ss-sidebar-btn {
-                    display: flex; align-items: center; gap: .6rem;
-                    padding: .65rem 1rem;
-                    background: #111; color: rgba(255,255,255,.7);
-                    border: none; border-left: none;
-                    font-size: .75rem; font-weight: 600; letter-spacing: .05em;
-                    cursor: pointer; transition: all .25s;
-                    white-space: nowrap;
-                    border-left: 3px solid transparent;
-                    text-decoration: none;
-                }
-                .ss-sidebar-btn:hover { color: #fff; padding-right: 1.4rem; }
-                .ss-sidebar-icon {
-                    width: 28px; height: 28px; border-radius: 6px;
-                    display: flex; align-items: center; justify-content: center;
-                    flex-shrink: 0;
+                @media (max-width: 1023px) {
+                    .ss-sidebar { display: none; }
                 }
 
                 /* ─── CTA ─── */
