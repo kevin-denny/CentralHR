@@ -724,7 +724,7 @@ export default function ServiceSensei() {
                     <div className="ss-con">
                         <div className="ss-aud-layout">
                             <div ref={ref('aud')} className={`ss-anim-left ${visible['aud'] ? 'visible' : ''}`}>
-                                <div className="ss-label">Who It's For</div>
+                                <div className="ss-label">Who It&apos;s For</div>
                                 <h2 className="ss-title">Built for <span className="a">every professional</span></h2>
                                 <p className="ss-body" style={{ marginBottom: '0' }}>
                                     Anyone who interacts with customers can benefit from Service Sensei. If you serve people — this is for you.
@@ -742,7 +742,7 @@ export default function ServiceSensei() {
                                 <div className="ss-aud-cta">
                                     <div className="ss-label">TikTok / Reel Caption</div>
                                     <p style={{ color: 'rgba(255,255,255,.85)', fontStyle: 'italic', marginBottom: '1.25rem', lineHeight: 1.8 }}>
-                                        "Great service is not luck — it is a skill."
+                                        &quot;Great service is not luck — it is a skill.&quot;
                                     </p>
                                     <p>
                                         Welcome to Service Sensei, where we share quick lessons to help you become a true professional in customer service. Follow for weekly tips on:

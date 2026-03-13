@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import Button from './ui/Button';
 
@@ -9,6 +10,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMobileMenu = () => setIsOpen(false); // Added closeMobileMenu function
 
     const navLinks = [
         { name: 'Home', path: '/' },
@@ -25,27 +27,9 @@ const Navbar = () => {
                 <div className="flex justify-between items-center" style={{ height: '6rem' }}>
                     {/* Logo */}
                     <div className="flex items-center" style={{ height: '100%', padding: '1rem 0' }}>
-                        <Link href="/" className="flex items-center gap-4" style={{ height: '100%' }}>
-                            <img
-                                src="/logo.png"
-                                alt="Central HR Logo"
-                                style={{
-                                    height: '100%',
-                                    width: 'auto',
-                                    maxHeight: '4rem',
-                                    objectFit: 'contain'
-                                }}
-                            />
-                            <img
-                                src="/ss.webp"
-                                alt="Service Sensei Logo"
-                                style={{
-                                    height: '100%',
-                                    width: 'auto',
-                                    maxHeight: '4rem',
-                                    objectFit: 'contain'
-                                }}
-                            />
+                        <Link href="/" className="flex items-center gap-2" onClick={closeMobileMenu}>
+                            <Image src={'/logo.png'} alt="Central HR Solutions Logo" width={40} height={40} className="object-contain" />
+                            <span className="font-bold text-xl tracking-tight text-primary">Central HR</span>
                         </Link>
                     </div>
 
