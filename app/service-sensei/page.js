@@ -584,13 +584,13 @@ export default function ServiceSensei() {
                     <div className="ss-hero-bg" />
                     <div className="ss-hero-grid" style={{ transform: `translateY(${scrollY * 0.12}px)` }} />
                     <div className="ss-hero-content">
-                        <div className="ss-eyebrow">A Central HR Solutions Initiative</div>
+                        <div className="ss-eyebrow">Central HR Solutions- Home of the Service Sensei</div>
                         <h1 className="ss-hero-title">
                             <span className="red">Service</span><br />
                             <span className="ghost">Sensei</span>
                         </h1>
                         <p className="ss-hero-sub">
-                            Your guide to mastering the art of professional service.<br />
+                            Service? You need the Service Sensei.<br />
                             <em>Great service is not accidental — it is intentional.</em>
                         </p>
                         <div className="ss-hero-tagline">Think Like a Pro. Serve Like a Sensei.</div>
@@ -630,17 +630,20 @@ export default function ServiceSensei() {
                     <div className="ss-con">
                         <div className="ss-intro-layout">
                             <div ref={ref('intro')} className={anim('intro')}>
-                                <div className="ss-label">What is Service Sensei</div>
+                                <div className="ss-label">Who is the Service Sensei?</div>
                                 <h2 className="ss-title">Your guide to <span className="a">service mastery</span></h2>
                                 <p className="ss-body" style={{ marginBottom: '1.25rem' }}>
-                                    Service Sensei is your guide to mastering the art of professional service.
-                                    Through practical insights, real-world examples, and proven global best practices,
-                                    Service Sensei helps individuals and organizations elevate the way they serve customers,
-                                    colleagues, and communities.
+                                    Shashi Jayawardena *The Service Sensei* has over 20 years of experience,
+                                    where his experience becomes unique is due to the fact that he started at a counter staff member at Dialog,
+                                    when Dialog was only 1 outlet, he got his operational Service background there,
+                                    from there he joined the training and development function at Dialog and his training career to becoming the G.O.A.T in people development in Sri Lanka started,
+                                    having led training departments at Cinnamon Hotels and Resorts (John Keells) as the Head of L&D, General Manager Aitken Spence Hotels and Resorts for Sri Lanka he got all the experience in high class L&D,
+                                    he is a master trainer from City & Guilds (UK) a master trainer and invigilator from the Emirates Academy of Hospitality Managemenet (EAHM) having mastered L&D he jumped into C Suite operations with a new purpose,
+                                    take his L&D knowhow and convert it into rupees and cents, and he did that perfectly at Adana Foods, opening outlets in Sri Lanka and Dubai and Introducing never before see products in F&B.
                                 </p>
                                 <p className="ss-body">
-                                    Whether you are a front-line employee, a manager, or a business owner, Service Sensei
-                                    equips you with the mindset and skills needed to deliver exceptional service every day.
+                                    He is now the CEO of Central HR Solutions, the leading name in People Development with the best in class strategic initiatives and clients from all over the world.
+                                    But most importantly he is a Child of God and the world's BEST DAD.
                                 </p>
                                 <div className="ss-stat-row">
                                     <div className="ss-stat">
