@@ -28,9 +28,11 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex items-center" style={{ height: '100%', padding: '1rem 0' }}>
                         <Link href="/" className="flex items-center gap-4" style={{ height: '100%' }}>
-                            <img
+                            <Image
                                 src="/logo.png"
                                 alt="Central HR Logo"
+                                width={200}
+                                height={64}
                                 style={{
                                     height: '100%',
                                     width: 'auto',
@@ -38,9 +40,11 @@ const Navbar = () => {
                                     objectFit: 'contain'
                                 }}
                             />
-                            <img
+                            <Image
                                 src="/ss.webp"
                                 alt="Central HR Logo"
+                                width={200}
+                                height={64}
                                 style={{
                                     height: '100%',
                                     width: 'auto',

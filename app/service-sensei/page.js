@@ -643,7 +643,7 @@ export default function ServiceSensei() {
                                 </p>
                                 <p className="ss-body">
                                     He is now the CEO of Central HR Solutions, the leading name in People Development with the best in class strategic initiatives and clients from all over the world.
-                                    But most importantly he is a Child of God and the world's BEST DAD.
+                                    But most importantly he is a Child of God and the world&apos;s BEST DAD.
                                 </p>
                                 <div className="ss-stat-row">
                                     <div className="ss-stat">
