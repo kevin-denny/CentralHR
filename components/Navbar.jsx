@@ -41,7 +41,7 @@ const Navbar = () => {
                                 }}
                             />
                             <Image
-                                src="/ss.webp"
+                                src="/ss.png"
                                 alt="Central HR Logo"
                                 width={200}
                                 height={64}
