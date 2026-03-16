@@ -307,8 +307,32 @@ export default function ServiceSensei() {
                     position: relative; z-index: 1;
                     width: 230px; height: 230px; border-radius: 50%;
                     background: #0a0a0a; display: flex; align-items: center; justify-content: center;
+                    overflow: hidden;
                 }
                 @keyframes spin { to { transform: rotate(360deg); } }
+                
+                .ss-intro-images {
+                    display: flex; gap: 2rem; align-items: center; justify-content: center;
+                    flex-wrap: wrap; margin: 0 auto;
+                }
+                .ss-tiktok-link {
+                    display: block; width: 230px; height: 425px; /* match image height */
+                    border-radius: 16px;
+                    position: relative; overflow: hidden;
+                    border: 4px solid transparent;
+                    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                                conic-gradient(#69C9D0, #EE1D52, #010101, #69C9D0) border-box;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .ss-tiktok-link:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    box-shadow: 0 10px 30px rgba(238, 29, 82, 0.4);
+                }
+                .ss-tiktok-img-inner {
+                    width: 100%; height: 100%; border-radius: 12px;
+                    overflow: hidden; background: #0a0a0a;
+                    display: flex; align-items: center; justify-content: center;
+                }
 
                 /* ─── PURPOSE ─── */
                 .ss-purpose-bg { background: #1b3a64; }
@@ -661,16 +685,35 @@ export default function ServiceSensei() {
                                 </div>
                             </div>
                             <div className={`ss-anim-right d2 ${visible['intro'] ? 'visible' : ''}`}>
-                                <div className="ss-logo-ring">
-                                    <div className="ss-logo-inner">
-                                        <Image
-                                            src="/ss.webp"
-                                            alt="Service Sensei Logo"
-                                            width={170}
-                                            height={170}
-                                            style={{ objectFit: 'contain' }}
-                                        />
+                                <div className="ss-intro-images">
+                                    <div className="ss-logo-ring">
+                                        <div className="ss-logo-inner">
+                                            <Image
+                                                src="/ss.png"
+                                                alt="Service Sensei Logo"
+                                                width={230}
+                                                height={230}
+                                                style={{ objectFit: 'cover', width: '100%', height: '100%', borderRadius: '50%' }}
+                                            />
+                                        </div>
                                     </div>
+                                    <a
+                                        href="https://www.tiktok.com/@servicesensei"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="ss-tiktok-link"
+                                        title="Follow Service Sensei on TikTok"
+                                    >
+                                        <div className="ss-tiktok-img-inner">
+                                            <Image
+                                                src="/images/sstiktok.jpeg"
+                                                alt="Service Sensei TikTok"
+                                                width={230}
+                                                height={425}
+                                                style={{ objectFit: 'cover', borderRadius: '12px' }}
+                                            />
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
