@@ -81,7 +81,7 @@ export default function Contact() {
                 </div>
 
                 {/* Contact Form below the info */}
-                <div className="mt-16 max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200">
+                {/* <div className="mt-16 max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg border border-gray-200">
                     <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
                     <form className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -120,7 +120,7 @@ export default function Contact() {
                             Send Message
                         </Button>
                     </form>
-                </div>
+                </div> */}
 
             </Section>
         </>
