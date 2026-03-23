@@ -2,8 +2,9 @@ import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import TestimonialCard from '../components/ui/TestimonialCard';
 import Image from 'next/image';
-import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle, Quote } from 'lucide-react';
+import { Users, ShieldCheck, Briefcase, TrendingUp, CheckCircle } from 'lucide-react';
 
 export const metadata = {
     title: 'Central HR Solutions | Expert HR Consulting Services',
@@ -137,48 +138,43 @@ export default function Home() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
                     <p className="text-xl max-w-2xl mx-auto text-gray-600">
                         Don&apos;t just take our word for it. Here&apos;s what our partners have to say.
-
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {[
                         {
-                            name: "Sarah Jenkins",
-                            role: "CEO, TechStart Inc.",
-                            text: "Central HR Solutions transformed our hiring process. We've seen a 40% increase in retention since implementing their strategies."
+                            id: 'mahaweli-reach-hotel',
+                            name: "Director of Operations",
+                            role: "Mahaweli Reach Hotel",
+                            text: "We would like to extend our sincere thanks to Mr. Shashi Jayawardena for his exceptional efforts, dedication, and guidance during the training program. His commitment to ensuring a meaningful and enriching learning experience was highly appreciated by all participants.\n\nThe staff found the training program conducted by Mr. Shashi Jayawardena to be an insightful session. The sessions were well structured, highly engaging, and delivered in a clear and comprehensive manner, ensuring accessibility for all staff members. The content was directly aligned with our day to day operations and thoughtfully designed to address practical challenges within the hotel industry.\n\nMr. Shashi Jayawardena demonstrated a high level of subject expertise and professionalism throughout the program. His approach encouraged active participation through structured discussions and relevant real life examples, contributing to an effective and engaging learning environment. Participants gained valuable insights, strengthened their existing knowledge, and developed practical skills that can be readily applied in their respective roles.\n\nOverall, the training program was both informative and impactful, making a significant contribution to the professional development of our team. We sincerely appreciate the dedication and professionalism demonstrated throughout the engagement and would confidently recommend this training program to organizations seeking structured, results-oriented learning solutions."
                         },
                         {
-                            name: "Michael Chen",
-                            role: "Director of Operations, GrowthCo",
-                            text: "Their compliance expertise saved us from potential legal pitfalls. The team is knowledgeable, responsive, and truly cares."
+                            id: 'soul-sounds-academy',
+                            name: "Soundarie David",
+                            role: "Director – Soul Sounds Academy",
+                            text: "I've had the pleasure of attending and collaborating on training sessions with Shashi Jayawardena and Central HR Solutions, and what truly sets them apart is their approach. Each programme is thoughtfully tailored—not just to organisational needs, but to the people within them.\n\nTheir training goes beyond traditional HR practices; it focuses on developing better human beings. In a time where digital interaction often replaces genuine human connection, this people-centric focus is both refreshing and essential.\n\nEvery session I've experienced has been energetic, engaging, and highly motivating. What is especially impressive is the quick turnaround in impact—organisations see tangible results in a short time, and the positive feedback from teams speaks volumes.\n\nShashi brings a unique ability to inspire meaningful change, and Central HR Solutions is undoubtedly a go-to partner for any organisation looking to grow and transform for the better."
                         },
                         {
-                            name: "Emily Rodriguez",
-                            role: "Founder, Creative Agency",
-                            text: "Outsourcing our HR to Central HR was the best decision we made this year. It allowed us to focus on scaling our business."
+                            id: 'yasaska-gamage',
+                            name: "Yasaska Gamage",
+                            role: "Assistant General Manager – Marketing",
+                            text: "Coming from Marketing, I have always believed training should solve real business problems, not just fulfil a function. That's what led me to organize a company-wide customer service training stepping outside the \"HR owns training\" mindset. Working with Central HR made that decision worthwhile.\n\nWhat stood out was how naturally Shashi connected with a cross-functional audience. This wasn't a typical HR session, it reframed customer service as a shared responsibility.\n\nEven as the organizer, sitting through the same session, it never felt repetitive. There was always something new to take away. And the feedback said it all. Employees didn't just appreciate it, they wanted more. That's when you know it's not just another program. It is impactful."
                         }
                     ].map((client, i) => (
                         <AnimatedSection key={i} animation="slideUp" delay={i * 150}>
-                            <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full group">
-                                <Quote size={40} className="text-accent mb-4 opacity-30 transition-all duration-300 group-hover:opacity-50 group-hover:scale-110" />
-                                <p className="text-gray-700 mb-6 italic flex-grow text-lg leading-relaxed">
-                                    &quot;{client.text}&quot;
-
-                                </p>
-                                <div className="flex items-center mt-4">
-                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold mr-4 text-xl shadow-md">
-                                        {client.name.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-primary">{client.name}</div>
-                                        <div className="text-sm text-gray-500">{client.role}</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <TestimonialCard
+                                text={client.text}
+                                name={client.name}
+                                role={client.role}
+                                delay={i * 150}
+                                href={`/testimonials#${client.id}`}
+                            />
                         </AnimatedSection>
                     ))}
+
                 </div>
             </Section>
+
 
             {/* CTA Section */}
             <Section className="bg-primary text-white text-center">
