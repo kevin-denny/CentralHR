@@ -2,7 +2,7 @@ import Section from '../../components/ui/Section';
 import Card from '../../components/ui/Card';
 import AnimatedSection from '../../components/ui/AnimatedSection';
 import Image from 'next/image';
-import { Target, Eye, Heart, Users } from 'lucide-react';
+import { Users, Heart, BookOpen, Shield, Trophy, Leaf } from 'lucide-react';
 
 export const metadata = {
     title: 'About Us | Central HR Solutions',
@@ -24,10 +24,12 @@ export default function About() {
     const restOfTeam = teamMembers.filter(m => m.name !== 'Shashi Jayawardena');
 
     const values = [
-        { icon: <Target size={32} />, title: 'Integrity', desc: 'We operate with the highest ethical standards.' },
-        { icon: <Eye size={32} />, title: 'Transparency', desc: 'Open communication and honest advice.' },
-        { icon: <Heart size={32} />, title: 'Empathy', desc: 'We understand the human side of business.' },
-        { icon: <Users size={32} />, title: 'Collaboration', desc: 'Working together to achieve your goals.' },
+        { icon: <Users size={32} />, title: 'Great People Make Great Organisations', desc: 'So we bring, develop and nourish them for the organisation.' },
+        { icon: <Heart size={32} />, title: 'Empathy is Key', desc: 'We work with empathy and embed empathy in everyone we work with.' },
+        { icon: <BookOpen size={32} />, title: 'Sustain Learning', desc: 'We want organisations that work with us to be self sufficient within 1 year.' },
+        { icon: <Shield size={32} />, title: 'Operational Excellence', desc: 'We guarantee that no bells, no whistles, your operations will thrive.' },
+        { icon: <Trophy size={32} />, title: 'Win Win Win', desc: 'Win for the organisation, win for its people, win for the customers — is what we deliver.' },
+        { icon: <Leaf size={32} />, title: 'Leave the Place Better', desc: 'We ensure a better place to work once we are done with your organisation.' },
     ];
 
     return (
@@ -75,10 +77,10 @@ export default function About() {
                     <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
                     <p className="text-gray-600">The principles that guide everything we do.</p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {values.map((value, index) => (
-                        <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
-                            <Card className="text-center group">
+                        <AnimatedSection key={index} animation="slideUp" delay={index * 100} className="h-full">
+                            <Card className="text-center group h-full flex flex-col">
                                 <div className="text-accent mb-4 flex justify-center">
                                     <div className="p-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-xl inline-block transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                                         {value.icon}
