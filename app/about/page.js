@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function About() {
     const teamMembers = [
-        { name: 'Shashi Jayawardena', role: 'Master Trainer, CEO, Hotelier', bio: '', image: '/team/shashi.png' },
+        { name: 'Shashi Jayawardena', role: 'Service Sensei, Master Trainer, CEO, Hotelier', bio: '', image: '/team/shashi.png' },
         { name: 'Soundarie David Rodrigo', role: 'Attorney-at-law, Artistic Director, Concert Pianist', bio: '', image: '/team/soundarie.png' },
         { name: 'Bjorn Vanderhorst', role: 'Senior Consultant, Michelin-starred Chef, Culinary Director', bio: '', image: '/team/bjorn.png' },
         { name: 'Priyankara Sumanapalage', role: 'CEO, Educator, Colombo Bartender & Barista School', bio: '', image: '/team/priyankara.png' },
