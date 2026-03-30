@@ -36,7 +36,9 @@ export default function Contact() {
                                 <Phone size={24} className="text-accent mr-4 flex-shrink-0" />
                                 <div>
                                     <h3 className="font-bold text-lg mb-1">Phone</h3>
-                                    <p className="text-gray-600">+94 77 743 1596</p>
+                                    <a href="tel:+94777431596" className="text-gray-600 hover:underline">
+                                        +94 77 743 1596
+                                    </a>
                                 </div>
                             </Card>
 

@@ -55,7 +55,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="flex items-center">
                                 <Phone size={20} className="mr-2 text-accent" />
-                                <span className="" style={{ opacity: 0.9 }}>+94 77 743 1596</span>
+                                <a href="tel:+94777431596" style={{ opacity: 0.9 }}>+94 77 743 1596</a>
                             </li>
                             <li className="flex items-center">
                                 <Mail size={20} className="mr-2 text-accent" />
@@ -65,8 +65,21 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t pt-8 text-center text-sm" style={{ borderColor: 'rgba(255,255,255,0.1)', opacity: 0.7 }}>
-                    <p>&copy; {currentYear} Central HR Solutions. All rights reserved.</p>
+                <div
+                    className="border-t pt-8 text-center text-sm"
+                    style={{ borderColor: 'rgba(255,255,255,0.1)', opacity: 0.7 }}
+                >
+                    <p>
+                        &copy; {currentYear} Central HR Solutions. All rights reserved. Powered by{' '}
+                        <a
+                            href="https://www.onestopprojects.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        // className="underline hover:text-white"
+                        >
+                            One Stop
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
