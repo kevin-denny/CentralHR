@@ -140,7 +140,7 @@ export default function Home() {
                         Don&apos;t just take our word for it. Here&apos;s what our partners have to say.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {[
                         {
                             id: 'mahaweli-reach-hotel',
@@ -159,6 +159,12 @@ export default function Home() {
                             name: "Yasaska Gamage",
                             role: "Assistant General Manager – Marketing",
                             text: "Coming from Marketing, I have always believed training should solve real business problems, not just fulfil a function. That's what led me to organize a company-wide customer service training stepping outside the \"HR owns training\" mindset. Working with Central HR made that decision worthwhile.\n\nWhat stood out was how naturally Shashi connected with a cross-functional audience. This wasn't a typical HR session, it reframed customer service as a shared responsibility.\n\nEven as the organizer, sitting through the same session, it never felt repetitive. There was always something new to take away. And the feedback said it all. Employees didn't just appreciate it, they wanted more. That's when you know it's not just another program. It is impactful."
+                        },
+                        {
+                            id: 'new-philip-hospitals',
+                            name: "Dr. Isshani Fernando",
+                            role: "CEO New Philip Hospitals Kalutara",
+                            text: "We had the pleasure of working with Central HR Solutions for staff training and motivation at our hospital. The experience has been exceptional from beginning to end. The Central HR team demonstrated a deep understanding of private healthcare and tailored their programs for our specific requirements.\n\nThe training sessions were engaging and very interesting as well as well-structured. They kept the content relevant to staff at all levels. They combined practical knowledge with interactive methods, ensuring that participants stayed actively involved and be able to apply the knowledge they learnt in their daily roles. The team at Central HR Solutions are very professional and well experienced.\n\nThey were excellent in motivation and boosting team morale. There is definitely improvement in team work, confidence and communication within the staff.\n\nTheir commitment to excellence, attention to detail and ability to connect and inspire staff at all levels make them a highly recommended partner for any healthcare institution looking to enhance staff performance."
                         }
                     ].map((client, i) => (
                         <AnimatedSection key={i} animation="slideUp" delay={i * 150}>

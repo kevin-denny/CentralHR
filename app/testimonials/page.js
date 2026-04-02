@@ -39,6 +39,17 @@ const testimonials = [
             "What stood out was how naturally Shashi connected with a cross-functional audience. This wasn't a typical HR session, it reframed customer service as a shared responsibility.",
             "Even as the organizer, sitting through the same session, it never felt repetitive. There was always something new to take away. And the feedback said it all. Employees didn't just appreciate it, they wanted more. That's when you know it's not just another program. It is impactful."
         ]
+    },
+    {
+        id: 'new-philip-hospitals',
+        name: 'Dr. Isshani Fernando',
+        role: 'CEO New Philip Hospitals Kalutara',
+        paragraphs: [
+            "We had the pleasure of working with Central HR Solutions for staff training and motivation at our hospital. The experience has been exceptional from beginning to end. The Central HR team demonstrated a deep understanding of private healthcare and tailored their programs for our specific requirements.",
+            "The training sessions were engaging and very interesting as well as well-structured. They kept the content relevant to staff at all levels. They combined practical knowledge with interactive methods, ensuring that participants stayed actively involved and be able to apply the knowledge they learnt in their daily roles. The team at Central HR Solutions are very professional and well experienced.",
+            "They were excellent in motivation and boosting team morale. There is definitely improvement in team work, confidence and communication within the staff.",
+            "Their commitment to excellence, attention to detail and ability to connect and inspire staff at all levels make them a highly recommended partner for any healthcare institution looking to enhance staff performance."
+        ]
     }
 ];
 
