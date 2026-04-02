@@ -57,13 +57,13 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center" style={{ gap: '2rem' }}>
+                    <div className="hidden md:flex items-center" style={{ gap: '1.25rem' }}>
                         <style>{`
-                            @media (max-width: 768px) {
+                            @media (max-width: 1150px) {
                                 .md\\:flex { display: none !important; }
                                 .md\\:hidden { display: flex !important; }
                             }
-                            @media (min-width: 769px) {
+                            @media (min-width: 1151px) {
                                 .md\\:hidden { display: none !important; }
                                 .md\\:flex { display: flex !important; }
                             }
