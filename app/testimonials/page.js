@@ -50,6 +50,17 @@ const testimonials = [
             "They were excellent in motivation and boosting team morale. There is definitely improvement in team work, confidence and communication within the staff.",
             "Their commitment to excellence, attention to detail and ability to connect and inspire staff at all levels make them a highly recommended partner for any healthcare institution looking to enhance staff performance."
         ]
+    },
+    {
+        id: 'gateway-college-kandy',
+        name: 'Nelum De Alwis',
+        role: 'Ex Principal – Hillwood College Kandy / Current Principal – Gateway College Kandy',
+        paragraphs: [
+            "I came in contact with Mr Shashi Jayawardena of Central HR Solutions, many years ago when we were looking for a trainer to conduct a series of training sessions for teachers and students in Hillwood College Kandy. I am so happy I could get his service once again for the staff and children of Gateway College Kandy.",
+            "As a school principal, I extend my sincere appreciation to this exceptional trainer and motivational speaker for his invaluable contribution to students and staff. I witnessed the transformation he brings into their outlook to life and work, which generate a positive work environment and foster unity and progress.",
+            "His inspiring words, practical guidance, and engaging approach have left a meaningful and lasting impact on our school community. He has successfully encouraged our students to believe in themselves, aim higher, and develop a positive mindset towards learning and life.",
+            "Such dedication to empowering young minds is truly admirable, and we are grateful for his remarkable service. On behalf of our school community we wish him continued success in empowering many generations to come."
+        ]
     }
 ];
 
